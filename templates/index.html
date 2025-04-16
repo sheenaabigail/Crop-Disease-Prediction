@@ -1,0 +1,78 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<!-- Hero Section -->
+<section class="banner vh-100 py-5 text-center text-white d-flex align-items-center position-relative" id="home" style="background-image: url('{{ url_for('static', filename='images/image.png') }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    
+    <div class="container position-relative">
+        <h1 class="display-4 fw-bold text-white">CROP CARE Ai</h1>
+        <p class="lead text-white">Know what to plant, when to fertilize, and how to protect.</p>
+        <div class="mt-4 text-white">
+            <!-- <h4 class="text-white"><strong>Key Questions We Answer:</strong></h4>
+            <ul class="list-unstyled">
+                <li>✔ What crop to plant here?</li>
+                <li>✔ What fertilizer to use?</li>
+                <li>✔ Which disease does your crop have?</li>
+                <li>✔ How to cure the disease?</li>
+            </ul> -->
+        </div>
+    </div>
+</section>
+
+
+<!-- About Section -->
+<section class="about py-5">
+    <div class="container text-center">
+        <h2 class="mb-4">About Us</h2>
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <img src="{{ url_for('static', filename='images/core.jpg') }}" class="img-fluid rounded shadow" alt="About Us">
+            </div>
+            <div class="col-lg-6 mt-4 mt-lg-0">
+                <h3>Improving Agriculture, Improving Lives</h3>
+                <p class="text-muted">We leverage AI and machine learning to provide farmers with insights that boost productivity and efficiency. Understand your region's agricultural dynamics and optimize your yield.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section class="services py-5 bg-light">
+    <div class="container text-center">
+        <h2 class="mb-5">Our Services</h2>
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="card shadow border-0">
+                    <img src="{{ url_for('static', filename='images/s3.jpg') }}" class="card-img-top" alt="Crop Recommendation">
+                    <div class="card-body">
+                        <h4 class="card-title">Crop Recommendation</h4>
+                        <p class="card-text">Get insights on the best crops to grow based on soil and environmental conditions.</p>
+                        <a href="{{ url_for('crop_recommend') }}" class="fw-bold">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="card shadow border-0">
+                    <img src="{{ url_for('static', filename='images/s2.jpg') }}" class="card-img-top" alt="Fertilizer Recommendation">
+                    <div class="card-body">
+                        <h4 class="card-title">Fertilizer Recommendation</h4>
+                        <p class="card-text">Identify the best fertilizers for your soil and crops to enhance productivity.</p>
+                        <a href="{{ url_for('fertilizer_recommendation') }}" class="fw-bold">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="card shadow border-0">
+                    <img src="{{ url_for('static', filename='images/s4.jpg') }}" class="card-img-top" alt="Crop Disease Prediction">
+                    <div class="card-body">
+                        <h4 class="card-title">Crop Disease Prediction</h4>
+                        <p class="card-text">Diagnose crop diseases early and get recommendations for effective treatments.</p>
+                        <a href="{{ url_for('disease_prediction') }}" class="fw-bold">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
